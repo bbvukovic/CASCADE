@@ -1019,7 +1019,209 @@ class pre_abundances():
         d = d.reset_index()
         d.to_csv(self.export_path + "Dimiza2015.csv", index=False)
 
+    def clean_EN616(self):
 
+        # Read abundance data
+        d = pd.read_excel(
+            self.import_path + "EN616_Atlantic.xlsx",
+            sheet_name="Cells_Liter"
+        )
+        # Remove leading/trailing spaces from column names
+        d.columns = d.columns.str.strip()
+        # --------------------------------------------------
+        # Date
+        # --------------------------------------------------
+        # Standardize EN616 taxon names that are not automatically
+        # resolved by rename_synonyms_wide()
+        d.rename(columns={
+            "Gephyrocapsa ericsonii (McIntyre & Bé, 1967)":
+                "Gephyrocapsa ericsonii HET",
+
+            "Oolithotus fragilis (Lohmann 1912) Martini & Müller, 1972":
+                "Oolithotus fragilis HET",
+
+            "Pappomonas sp. type 5 Cros & Fortuño, 2002":
+                "Pappomonas sp. type 5 HET",
+
+            "Papposphaera sarion Thomsen 1981 emend Thomsen, Heldal and Østergaard 2016":
+                "Papposphaera sarion"
+        }, inplace=True)
+        d["Date"] = pd.to_datetime(d["Date"])
+
+        d["Day"] = pd.DatetimeIndex(d["Date"]).day
+        d["Month"] = pd.DatetimeIndex(d["Date"]).month
+        d["Year"] = pd.DatetimeIndex(d["Date"]).year
+
+        d.drop(columns="Date", inplace=True)
+
+        # --------------------------------------------------
+        # Remove metadata not used by CASCADE
+        # --------------------------------------------------
+
+        d.drop(columns="Station", inplace=True)
+
+        # --------------------------------------------------
+        # Add CASCADE metadata
+        # --------------------------------------------------
+
+        d.insert(0, "Reference", "EN616 cruise Atl")
+
+        # Change this if the abundance counts were obtained
+        # using a different microscopy method
+        d.insert(0, "Method", "Not reported")
+
+        # --------------------------------------------------
+        # Arrange CASCADE dimensions
+        # --------------------------------------------------
+
+        dimensions = [
+            "Latitude",
+            "Longitude",
+            "Depth",
+            "Day",
+            "Month",
+            "Year",
+            "Reference",
+            "Method"
+        ]
+
+        d = d.set_index(dimensions)
+
+        # Missing abundance values are interpreted as zero
+        d.fillna(0, inplace=True)
+
+        d = d.reset_index()
+
+        # --------------------------------------------------
+        # Standardize taxonomy using synonyms.yml
+        # --------------------------------------------------
+
+        d = rename_synonyms_wide(
+            d,
+            classification_path=self.classification_path
+        )
+
+        # --------------------------------------------------
+        # Export processed abundance dataset
+        # --------------------------------------------------
+
+        d.to_csv(
+            self.export_path + "EN616_Atlantic.csv",
+            index=False
+        )
+        
+    def clean_TN376(self):
+
+        # Read abundance data
+        d = pd.read_excel(
+            self.import_path + "TN376_Indian.xlsx",
+            sheet_name="Cells_Liter"
+        )
+
+        # Remove leading/trailing spaces from column names
+        d.columns = d.columns.str.strip()
+        # Standardize TN376 taxon names that are not automatically
+        # resolved by rename_synonyms_wide()
+        d.rename(columns={
+            "Formonsella pyramidosa Thomsen, Cros, Malinverno, Ostergaard, Cortés, Geisen & Young, 2016":
+                "Formonsella pyramidosa HET",
+
+            "Gephyrocapsa ericsonii protohuxleyi type Cros & Fortuño, 2002":
+                "Gephyrocapsa ericsonii HET",
+
+            "Gephyrocapsa muellerae Bréhéret, 1978":
+                "Gephyrocapsa muellerae HET",
+
+            "Papposphaera sp. type 3 Cros & Fortuño, 2002":
+                "Papposphaera sp. type 3 HET",
+
+            "Papposphaera? sp. type 6 Cros & Fortuño, 2002":
+                "undefined Papposphaera",
+
+            "Pappomonas sp. type 4 Cros & Fortuño, 2002":
+                "Pappomonas sp. type 4 HET",
+
+            "Polycrater sp. ladle-like Cros & Fortuño, 2002":
+                "Polycrater sp. ladle-like POL",
+
+            "Syracosphaera tumularis Sánchez-Suárez, 1990":
+                "Syracosphaera tumularis HET",
+
+            "Sphaerocalyptra sp. 1 Cros & Fortuño, 2002":
+                "Sphaerocalyptra sp. 1 HOL",
+
+            "Sphaerocalyptra sp. 3 Cros & Fortuño, 2002":
+                "Sphaerocalyptra sp. 3 HOL",
+
+            "Umbilicosphaera hulburtiana\u00a0Gaarder, 1970":
+                "Umbilicosphaera hulburtiana HET"
+        }, inplace=True)
+        # --------------------------------------------------
+        # Date
+        # --------------------------------------------------
+
+        d["Date"] = pd.to_datetime(d["Date"])
+
+        d["Day"] = pd.DatetimeIndex(d["Date"]).day
+        d["Month"] = pd.DatetimeIndex(d["Date"]).month
+        d["Year"] = pd.DatetimeIndex(d["Date"]).year
+
+        d.drop(columns="Date", inplace=True)
+
+        # --------------------------------------------------
+        # Remove metadata not used by CASCADE
+        # --------------------------------------------------
+
+        d.drop(columns="Station", inplace=True)
+
+        # --------------------------------------------------
+        # Add CASCADE metadata
+        # --------------------------------------------------
+
+        d.insert(0, "Reference", "TN376 cruise Indian")
+
+        # Microscopy method is not specified in the source dataset
+        d.insert(0, "Method", "Not reported")
+
+        # --------------------------------------------------
+        # Arrange CASCADE dimensions
+        # --------------------------------------------------
+
+        dimensions = [
+            "Latitude",
+            "Longitude",
+            "Depth",
+            "Day",
+            "Month",
+            "Year",
+            "Reference",
+            "Method"
+        ]
+
+        d = d.set_index(dimensions)
+
+        # Missing abundance values are interpreted as zero
+        d.fillna(0, inplace=True)
+
+        d = d.reset_index()
+
+        # --------------------------------------------------
+        # Standardize taxonomy using synonyms.yml
+        # --------------------------------------------------
+
+        d = rename_synonyms_wide(
+            d,
+            classification_path=self.classification_path
+        )
+
+        # --------------------------------------------------
+        # Export processed abundance dataset
+        # --------------------------------------------------
+
+        d.to_csv(
+            self.export_path + "TN376_Indian.csv",
+            index=False
+        )
 
     def preprocess_all(self):
         self.clean_estrada2016()
@@ -1037,4 +1239,6 @@ class pre_abundances():
         self.clean_keuter2022()
         self.clean_guerreiro2023()
         self.clean_dimiza2015()
+        self.clean_EN616()
+        self.clean_TN376()
         print("finished processing abundances")

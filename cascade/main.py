@@ -961,13 +961,14 @@ class merge_abundances():
 
         d.rename(columns=lambda x: x.strip(), inplace=True)
 
-        with open(synonym_path, 'r') as f:
+        with open(synonym_path, 'r', encoding='utf-8') as f:
             groupings = load(f, Loader=Loader)
 
-
-        dict = {species:k
-            for k, v in groupings.items()
-            for species in v}
+        synonym_dict = {
+            species: canonical
+            for canonical, synonyms in groupings.items()
+            for species in synonyms
+        }
         try:
             d = d.drop(columns=['Phaeocystis pouchetii'])
         except:
@@ -979,9 +980,9 @@ class merge_abundances():
 
         d = d[d.sum(axis=1)>0]
 
-        # d = (d.rename(columns=dict)
+        # d = (d.rename(columns=synonym_dict)
         #     .groupby(level=0, axis=1, dropna=False)).sum( min_count=1).reset_index()
-        d = d.rename(columns=dict)
+        d = d.rename(columns=synonym_dict)
         d = d.T.groupby(level=0).sum(min_count=1).T.reset_index()
 
 
@@ -1004,7 +1005,7 @@ class merge_abundances():
         #print(d.reset_index()['Reference'].unique())
 
         #check if final species are in species library
-        species_library = {v: k for k, v in dict.items()}
+        species_library = set(groupings.keys())
 
         species_observed = d.columns
 

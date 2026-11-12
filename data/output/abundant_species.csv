@@ -1,140 +1,144 @@
 count,species
-5669,Emiliania huxleyi HET
-2147,Syracosphaera pulchra HET
-1750,Rhabdosphaera clavigera HET
-1634,Umbellosphaera tenuis HET
-1337,Discosphaera tubifera HET
-1288,Umbellosphaera irregularis HET
-1213,Algirosphaera robusta HET
-1190,Gephyrocapsa oceanica HET
-1176,Gephyrocapsa ericsonii HET
-1147,Calcidiscus leptoporus HET
-1027,Syracosphaera molischii HET
-1025,Helicosphaera carteri HET
-1016,Acanthoica quattrospina HET
-907,Florisphaera profunda NANO
+5728,Emiliania huxleyi HET
+2172,Syracosphaera pulchra HET
+1773,Rhabdosphaera clavigera HET
+1665,Umbellosphaera tenuis HET
+1349,Discosphaera tubifera HET
+1291,Umbellosphaera irregularis HET
+1234,Algirosphaera robusta HET
+1193,Gephyrocapsa oceanica HET
+1186,Gephyrocapsa ericsonii HET
+1166,Calcidiscus leptoporus HET
+1059,Acanthoica quattrospina HET
+1037,Syracosphaera molischii HET
+1027,Helicosphaera carteri HET
+908,Florisphaera profunda NANO
 820,Umbilicosphaera sibogae HET
-804,Syracosphaera mediterranea HET
-764,Calciosolenia brasiliensis HET
-672,Rhabdosphaera xiphos HET
-657,Syracosphaera histrica HET
-575,Syracosphaera ossa HET
-572,Calciosolenia murrayi HET
-512,Ophiaster hydroideus HET
-456,Gephyrocapsa muellerae HET
-453,Syracosphaera anthos HET
-449,Palusphaera vandelii HET
-424,Umbilicosphaera hulburtiana HET
-382,Helladosphaera cornifera HOL
+812,Syracosphaera mediterranea HET
+774,Calciosolenia brasiliensis HET
+702,Rhabdosphaera xiphos HET
+682,Syracosphaera histrica HET
+592,Syracosphaera ossa HET
+581,Calciosolenia murrayi HET
+513,Ophiaster hydroideus HET
+471,Palusphaera vandelii HET
+458,Gephyrocapsa muellerae HET
+456,Syracosphaera anthos HET
+431,Umbilicosphaera hulburtiana HET
+388,Helladosphaera cornifera HOL
+382,Syracosphaera nodosa HET
 377,Gladiolithus flabellatus HET
 369,Oolithotus antillarum HET
-354,Syracosphaera nodosa HET
-351,Syracosphaera prolongata HET
-342,Michaelsarsia elegans HET
-341,Coccolithus pelagicus HET
+367,Michaelsarsia elegans HET
+353,Syracosphaera prolongata HET
+351,Coccolithus pelagicus HET
+349,Syracosphaera arethusae HOL
 323,Michaelsarsia adriaticus HET
-318,Syracosphaera arethusae HOL
-307,Syracosphaera corolla HET
-293,Syracosphaera histrica HOL
-278,Corisphaera gracilis HOL
+320,Syracosphaera corolla HET
+308,Corisphaera gracilis HOL
+305,Syracosphaera histrica HOL
+305,Syracosphaera halldalii HET
+302,Calcidiscus leptoporus HOL
 274,Ceratolithus cristatus HET
-273,Syracosphaera halldalii HET
-266,Calcidiscus leptoporus HOL
+262,Ophiaster formosus HET
 244,Umbilicosphaera foliosa HET
-231,Syracosphaera mediterranea HOL wettsteinii type
-218,Syracosphaera anthos HOL
-217,Syracosphaera molischii HOL
+235,Syracosphaera mediterranea HOL wettsteinii type
+233,Alisphaera unicornis HET
+228,Syracosphaera marginiporata HET
+223,Syracosphaera anthos HOL
+221,Syracosphaera molischii HOL
+220,Alisphaera unicornis POL
 213,Acanthoica acanthifera HET
-213,Ophiaster formosus HET
-213,Alisphaera unicornis HET
-211,Calciopappus caudatus HET
 211,Syracosphaera protrudens HET
-208,Oolithotus fragilis HET
-208,Syracosphaera marginiporata HET
-202,Cyrtosphaera aculeata HET
-192,Alisphaera unicornis POL
+211,Calciopappus caudatus HET
+209,Cyrtosphaera aculeata HET
+209,Oolithotus fragilis HET
+196,Syracosphaera nana HET
+195,Syracosphaera rotula HET
+192,Calciopappus rigidus HET
 182,Calyptrolithina divergens HOL
-179,Syracosphaera rotula HET
-179,Syracosphaera nana HET
-175,Sphaerocalyptra quadridentata HOL
-171,Syracosphaera pulchra HOL oblonga type
-169,Helicosphaera hyalina HET
-167,Calciopappus rigidus HET
-149,Syracosphaera dilatata HET
+177,Sphaerocalyptra quadridentata HOL
+176,Syracosphaera pulchra HOL oblonga type
+171,Helicosphaera hyalina HET
+168,Helicosphaera HOL catilliferus type
+159,Syracosphaera dilatata HET
+144,Papposphaera lepida HET
 142,Syracosphaera bannockii HOL
-138,Syracosphaera aurisinae HET
-138,Helicosphaera HOL catilliferus type
-129,Papposphaera lepida HET
-128,Zygosphaera amoena HOL
+140,Syracosphaera aurisinae HET
+132,Syracosphaera strigilis HOL
+129,Zygosphaera amoena HOL
 127,Calyptrosphaera heimdaliae HOL
-121,Homozygosphaera spinosa HOL
-120,Syracosphaera strigilis HOL
+124,Homozygosphaera spinosa HOL
 120,Scyphosphaera apsteinii HET
+120,Syracosphaera orbiculus HET
 117,Syracosphaera periperforata HOL
-112,Syracosphaera hastata HET
+116,Syracosphaera hastata HET
+113,Helicosphaera pavimentum HOL
 111,Umbilicosphaera anulus HET
-106,Helicosphaera pavimentum HOL
-105,Syracosphaera orbiculus HET
-105,Gephyrocapsa ornata HET
+106,Syracosphaera aurisinae HOL
+106,Gephyrocapsa ornata HET
 105,Calyptrosphaera sphaeroidea HOL
-101,Helicosphaera pavimentum HET
 100,Syracosphaera magnaghii HOL
+95,Helicosphaera pavimentum HET
+94,Syracosphaera bannockii HET
+93,Syracosphaera arethusae HET
 92,Helicosphaera wallichii HET
-89,Syracosphaera arethusae HET
-89,Alisphaera gaudii HET
+91,Alisphaera gaudii HET
 84,Syracosphaera epigrosa HET
-84,Syracosphaera aurisinae HOL
-79,Syracosphaera bannockii HET
-76,Alisphaera extenta HET
-73,Syracosphaera tumularis HET
+78,Alisphaera extenta HET
+77,Syracosphaera tumularis HET
+74,Syracosphaera pulchra HOL galea type
+73,Syracosphaera noroitica HET
 72,Gephyrocapsa parvula HET
-69,Homozygosphaera triarcha HOL
-68,Syracosphaera pulchra HOL galea type
-67,Syracosphaera ampliora HET
-66,Syracosphaera mediterranea HOL gracillima type
-62,Picarola margalefii HET
+70,Homozygosphaera triarcha HOL
+69,Syracosphaera ampliora HET
+67,Syracosphaera mediterranea HOL gracillima type
+64,Syracosphaera mediterranea HOL hellenica type
+63,Picarola margalefii HET
+61,Zygosphaera marsilii HOL
 60,Pontosphaera syracusana HET
 59,Syracosphaera exigua HET
 57,Acanthoica acanthos HET
-54,Syracosphaera noroitica HET
+55,Corisphaera tyrrheniensis HOL
 54,Braarudosphaera bigelowii NANO
-53,Acanthoica quattrospina HOL
-52,Syracosphaera borealis HET
+54,Syracosphaera borealis HET
+54,Acanthoica quattrospina HOL
+51,Syracosphaera nana HOL
 51,Syracosphaera squamosa HET
 50,Syracosphaera gaarderae HET
-50,Corisphaera tyrrheniensis HOL
-47,Syracosphaera isselii HOL
 47,Calyptrolithina multipora HOL
-46,Zygosphaera marsilii HOL
+47,Syracosphaera isselii HOL
 45,Ceratolithus cristatus CER
 44,Calicasphaera blokii HOL
 43,Sphaerocalyptra adenensis HOL
-41,Syracosphaera mediterranea HOL marisrubri type
 41,Alisphaera pinnigera HET
-41,Syracosphaera nana HOL
+41,Alisphaera gaudii POL
+41,Syracosphaera mediterranea HOL marisrubri type
 41,Wigwamma antarctica HET
 41,Coccolithus pelagicus HOL
-41,Syracosphaera mediterranea HOL hellenica type
+40,Syracosphaera gaarderae HOL
+39,Alisphaera capulata HET
 39,Syracosphaera reniformis HET
-39,Syracosphaera gaarderae HOL
 35,Syracosphaera pulchra HOL pirus type
-34,Alisphaera capulata HET
 33,Gliscolithus amitakareniae HOL
+33,Pappomonas sp. type 5 HET
 33,Helicosphaera HOL ponticuliferus type
-33,Alisphaera gaudii POL
-32,Pappomonas sp. type 5 HET
 31,Pappomonas sp. type 3 HET
+31,Syracosphaera leptolepsis HET
+29,Formonsella pyramidosa HET
 29,Calicasphaera concava HOL
-28,Formonsella pyramidosa HET
+28,Syracosphaera strigilis HET
 28,Hayaster perplexus HET
-27,Syracosphaera strigilis HET
 27,Helladosphaera pienaarii HOL
 27,Helicosphaera HOL confusus type
+26,Syracosphaera azureaplaneta  HET
 25,Calicasphaera diconstricta HOL
 25,Turrilithus latericioides HET
 25,Algirosphaera cucullata HET
 25,Syracosphaera lafourcadii HOL
-21,Sphaerocalyptra sp. 1 HOL
+22,Sphaerocalyptra sp. 1 HOL
+22,Polycrater sp. ladle-like POL
 20,Holococcolithophora dentata HOL
+20,Canistrolithus valliformis POL
 20,Poritectolithus maximus HOL
 20,Syracolithus sp. type A HOL
